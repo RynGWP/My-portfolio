@@ -1,0 +1,72 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+background-color: rgb(4, 13, 32);
+
+}
+
+
+.maincontent{
+    color: darkblue;
+    animation: ryan 5s linear infinite ;
+
+}
+
+@keyframes ryan {
+   
+0%{
+    color:yellow;
+}
+25%{
+    color:rgb(21, 182, 56);
+}
+50%{
+    color:rgb(16, 177, 189);
+}
+75%{
+    color:rgb(87, 11, 185);
+}
+100%{
+    color:rgb(218, 218, 5);
+}
+}
+
+.maincontent h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top:100px;
+}
+
+.maincontent h2{
+    font-size: 5rem;
+    animation: heart 200ms infinite alternate linear;
+    position: absolute;
+    left:45%;
+    top:250px;
+  
+}
+
+@keyframes heart {
+    from {
+        transform: scale(.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#beshy{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:100px;
+}
