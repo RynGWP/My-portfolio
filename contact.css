@@ -12,7 +12,8 @@ background-color: rgb(4, 13, 32);
 .maincontent{
     color: darkblue;
     animation: ryan 5s linear infinite ;
-
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes ryan {
@@ -38,20 +39,16 @@ background-color: rgb(4, 13, 32);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 100px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     position: relative;
     top:100px;
+    text-align: center;
 }
 
-.maincontent h2{
+.maincontent > h2{
     font-size: 5rem;
     animation: heart 200ms infinite alternate linear;
     position: absolute;
-    left:45%;
     top:250px;
-  
 }
 
 @keyframes heart {
@@ -64,9 +61,29 @@ background-color: rgb(4, 13, 32);
 }
 
 #beshy{
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    color: aliceblue;  
     position: relative;
     top:100px;
+}
+
+@media (max-width:600px) {
+    .maincontent {
+        width: 100%;
+    }
+
+    .maincontent >#beshy {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .maincontent > h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .maincontent > h2 {
+        margin-left: auto;
+        margin-right:auto;
+        
+    }
 }

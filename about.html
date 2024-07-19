@@ -1,64 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="about.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
 </head>
 <body>
 
-    <div class="header">
-        <ul>
-            <li>
-                <a id="home" href="index.html">Home </a>
-                <a id="about"  href="about.html">About Me</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact Me</a>
-            </li>
-        </ul>
-    </div>
-
-   
-    
-     <div class="container">
-        <img src="pics.png" alt="">
-        <div class="main-content">
-            <div class="text-area">
-            <h1>Educational Attainment</h1>
-                 <h3>Elementary Education</h3>
-                    <ul>
-                        <li>Katidtuan, Kabacan, Cotabato</li>
-                    </ul>
-
-                <h3>Secondary Education</h3>
-                <ul>
-                    <li>St. Lukes Institute, Kabacan, Cotabato</li>
-                </ul>
-
-                <h3>Tertiary Education</h3>
-                <ul>
-                    <li>University Of Southern Mindanao</li>
-                </ul>
+    <!-- Nav section -->
+    <section class="nav ">
+        
+        <nav class="navbar fixed-top bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Personal Information</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item text-center">
+                        <div class="icon">
+                            <a href="https://web.facebook.com/profile.php?id=100076427416901">
+                            <a href="https://www.messenger.com/t/100076427416901">
+                            <a href="">
+                        </div>
+                    </li>
+                    <li class="nav-item fs-4 ">                       
+                        <a class="nav-link" href="index.html">Home </a>                 
+                        <a class="nav-link" href="./Myprojects.html">My Projects</a>
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                        <a class="nav-link" href="contact.html">Tech Stack</a>
+                    </li>
                
-             </div>
-        
-         </div>
-    </div>
+                </div>
+              </div>
+            </div>
+          </nav>
 
-    <div class="Skill-container">
-        <div class="cards">
-            <img src="HTML_certificate_1.jpg" alt="">
-            <img src="CSS_certificate.jpg" alt="">
-            <img src="JavaScript_certificate.jpg" alt="">
-            <img src="PHP_certificate.jpg" alt="">
-            <img src="Programming_Hero_Certificate_python_fundamental.jpg" alt="">
+     </section>
+
+    
+         
+
+     <section>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-xl-6 ">
+            <h1 class="h1 mt-5 py-3 display-4 fw-normal text-body-emphasis">My Certificates</h1>
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./Assets/HTML_certificate_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Assets/CSS_certificate.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Assets/JavaScript_certificate.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Assets/PHP_certificate.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Assets/Programming_Hero_Certificate_python_fundamental.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                  <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                </svg>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                </svg>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h2 class="display-4 fw-normal text-body-emphasis my-5">Educational Attainment</h2>
+              
+              <h3 class="h3">Elementary Education  </h3>
+              <p>Katidtuan Central Elementary School</p>
+              
+              <h3 class="h3">Secondary Education  </h3>
+              <p>St. Luke's Institute Kabacan </p>
+             
+              <h3 class="h3">Tertiary Education  </h3>
+              <p>University of southern Mindanao</p>
+            </div>
+          </div>
         </div>
-    </div>
-        
-    .
-     
+      </div>
+
+
+     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>        

@@ -1,0 +1,11 @@
+body {
+    height: 100vh;
+}
+
+#text-area {
+    height: 70px;
+}
+
+#leapYearResult {
+    color: lime;
+}
