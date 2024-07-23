@@ -9,3 +9,354 @@ body {
 #leapYearResult {
     color: lime;
 }
+
+/* dice game */
+
+.left-dice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.right-dice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* box container 1 */
+.dicebox1 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* display: none; */
+  
+}
+
+/* box container 2 */
+.dicebox2 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+    
+}
+
+/* box container 3 */
+.dicebox3 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+    
+}
+
+/* box container 4 */
+.dicebox4 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+    
+}
+
+/* box container 5 */
+.dicebox5 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+    
+}
+
+/* box container 6 */
+.dicebox6 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+    
+}
+
+/* 1 dot */
+.dicebox1 > .dots1 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 2/2/3/3;
+   
+}
+
+
+
+
+/* 2 dots */
+.dicebox2 > .dots2 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/3/2/4;
+   
+}
+
+.dicebox2 > :nth-child(2) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/1/4/2;
+   
+}
+
+
+/* 3 dots */
+.dicebox3 > .dots3 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/3/2/4;
+   
+}
+
+.dicebox3 > :nth-child(2) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/1/4/2;
+   
+}
+
+
+.dicebox3 > :nth-child(3) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 2/2/3/3;
+   
+}
+
+
+
+/* 4 dots */
+.dicebox4 > .dots4 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/1/2/2;
+   
+}
+
+.dicebox4 > :nth-child(2) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/3/2/4;
+}
+
+.dicebox4 > :nth-child(3) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/1/4/2;
+}
+
+
+.dicebox4 > :nth-child(4) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/3/4/4;
+}
+
+/* 5 dots */
+.dicebox5 > .dots5 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/1/2/2;
+   
+}
+
+.dicebox5 > :nth-child(2) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/3/2/4;
+}
+
+.dicebox5 > :nth-child(3) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/1/4/2;
+}
+
+
+.dicebox5 > :nth-child(4) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/3/4/4;
+}
+
+
+.dicebox5 > :nth-child(5) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 2/2/3/3;
+}
+
+/* 6 dots */
+.dicebox6 > .dots6 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/1/2/2;
+   
+}
+
+.dicebox6 > :nth-child(2) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 2/1/3/2;
+}
+
+.dicebox6 > :nth-child(3) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/1/4/2;
+}
+
+
+.dicebox6 > :nth-child(4) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 1/3/2/4;
+}
+
+
+.dicebox6 > :nth-child(5) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 2/3/3/4;
+}
+
+.dicebox6 > :nth-child(6) {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    gap:4px;
+    margin:15px;
+    grid-area: 3/3/4/4;
+}
+
+/* winner text-color */
+.winner {
+    color:rgb(19, 190, 19);
+}

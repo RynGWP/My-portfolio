@@ -72,9 +72,9 @@
                 <div class="card-title text-center">
                   <h2 class="h2 fw-normal py-3 mb-5">Leap Year checker</h2>
                   <div class="text-area col-10 mx-auto ">
-                    <h2 class="h2 mb-3">Input a year</h2>
+                    <h2 class="h2 fw-light mb-3">Input a year</h2>
                       <div class="input-group mb-3 ">                     
-                        <input type="text" class="form-control mb-3" id="yearInput" aria-label="Text input ">
+                        <input type="text" class="form-control mb-3"  id="yearInput" aria-label="Text input " >
                       </div>
                       <h2 class="quotes col-sm-12 " id="leapYearResult"></h2>                     
                       <div class="generate btn btn-success my-5 col-4 " id="checkYear">Check</div>
@@ -101,6 +101,51 @@
                       </div>
                       <p class="p text-center" id="charLimiter"> 0 / 60</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Dice Game -->
+      <section>
+        <div class="container mt-5 ">
+          <div class="row d-flex justify-content-center">
+            <div class="col-xl-6 mt-5 ">
+              <div class="card col-md-12 col-lg-10 col-xl-12 mb-5">
+                <div class="card-title text-center">
+                  <h2 class="h2 fw-normal py-3 mb-5">Dice Game</h2>
+                    <div class="row">
+                      <div class="h3 winner fw-light">Tie</div>
+                   
+                        <div class=" left-dice col-6">
+                          <p class="p mb-3 ">Player 1</p>                   
+                          <div class="dicebox1" id="player1Random">                                          
+                                <div class="dots1" id="dotsp1"></div>
+                                <div class="dots1" id="dotsp1"></div>
+                                <div class="dots1" id="dotsp1"></div>
+                                <div class="dots1" id="dotsp1"></div>
+                                <div class="dots1" id="dotsp1"></div>
+                                <div class="dots1" id="dotsp1"></div>
+                          </div>
+                                          
+                   
+                         </div>
+
+                        <div class="right-dice col-6 ">
+                          <p class="p mb-3 ">Player 2</p>                  
+                          <div class="dicebox1" id="player2Random">                                          
+                                <div class="dots1" id="dotsp2"></div>
+                                <div class="dots1" id="dotsp2"></div>
+                                <div class="dots1" id="dotsp2"></div>
+                                <div class="dots1" id="dotsp2"></div>
+                                <div class="dots1" id="dotsp2"></div>
+                                <div class="dots1" id="dotsp2"></div>
+                          </div>
+                        </div>
+                    </div>
+                           <div class="btn btn-success my-5 col-4" id="dice-Button">Refresh</div>
                 </div>
               </div>
             </div>

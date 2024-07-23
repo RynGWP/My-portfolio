@@ -50,78 +50,117 @@ leapYearchecker.addEventListener("click", function () {
   } else {
     leapYearResult.innerHTML = "Result :" + " Not a leap year";
   }
+
+  if (yearInput === "") {
+    leapYearResult.innerHTML = "";
+  }
 });
 
-//Character limits
-
-// let char = document.querySelector("#exampleFormControlTextarea1");
-// const charLimiter = document.querySelector("#charLimiter");
-
-// char.addEventListener("input", function () {
-//   let Character = char.value;
-//   let charLength = Character.length;
-//   let charMax = 60;
-//   charLimiter.innerHTML = charLength + " / " + charMax;
-
-//   if (charLength >= charMax) {
-//     // Disable further input by disabling the textarea
-//     char.disabled = true;
-//     // Optionally, you can remove the event listener to prevent further checks
-//   } else {
-//     // Enable the textarea
-//     char.disabled = false;
-//   }
-
-// });
-  
-  
-// char.addEventListener("keydown", function(e) {
-//     let Character = char.value;
-//     let charLength = Character.length;
-
-//     // Allow backspace (keyCode 8) and delete (keyCode 46) even if max length is reached
-//     if ((e.keyCode === 8 || e.keyCode === 46) && charLength === charMax) {
-//         char.disabled = false; // Ensure textarea is enabled for deletion
-//     }
-// });
-
-
-// let char = document.querySelector("#exampleFormControlTextarea1");
-// const charLimiter = document.querySelector("#charLimiter");
-// const charMax = 60; // Define the maximum character limit
-
-// char.addEventListener("input", function () {
-//   let Character = char.value;
-//   let charLength = Character.length;
-  
-//   charLimiter.innerHTML = charLength + " / " + charMax;
-  
-// });
-
-
-
-
+//Character limiter
 
 let char = document.querySelector("#exampleFormControlTextarea1");
 const charLimiter = document.querySelector("#charLimiter");
 const charMax = 60; // Define the maximum character limit
 
 char.addEventListener("input", function () {
-    let Character = char.value;
-    let charLength = Character.length;
+  let Character = char.value;
+  let charLength = Character.length;
 
-    if (charLength > charMax) {
-        char.value = Character.substring(0, charMax);
-        charLength = charMax; // Update charLength to max value if limit is exceeded
-    }
-    
-    charLimiter.innerHTML = charLength + " / " + charMax;
+  if (charLength > charMax) {
+    char.value = Character.substring(0, charMax);
+    charLength = charMax; // Update charLength to max value if limit is exceeded
+  }
+
+  charLimiter.innerHTML = charLength + " / " + charMax;
 });
 
-char.addEventListener("keydown", function(event) {
-    let charLength = char.value.length;
+char.addEventListener("keydown", function (event) {
+  let charLength = char.value.length;
 
-    if (charLength >= charMax && event.key !== "Backspace" && event.key !== "Delete" && !event.metaKey && !event.ctrlKey) {
-        event.preventDefault();
-    }
+  if (
+    charLength >= charMax &&
+    event.key !== "Backspace" &&
+    event.key !== "Delete" &&
+    !event.metaKey &&
+    !event.ctrlKey
+  ) {
+    event.preventDefault();
+  }
+});
+
+//Dice Game
+
+const diceButton = document.querySelector("#dice-Button");
+let player1Dice = document.querySelector("#player1Random");
+let player2Dice = document.querySelector("#player2Random");
+let winnerText = document.querySelector(".winner");
+const dots = document.querySelector("#dotsp1");
+const dots2 = document.querySelector("#dotsp2");
+const Dices = [
+  {
+    Dice: "dicebox1",
+    dot: "dots1"
+  },
+  {
+    Dice: "dicebox2",
+    dot: "dots2"
+  },
+  {
+    Dice: "dicebox3",
+    dot: "dots3"
+  },
+  {
+    Dice: "dicebox4",
+    dot: "dots4"
+  },
+  {
+    Dice: "dicebox5",
+    dot: "dots5"
+  },
+  {
+    Dice: "dicebox6",
+    dot: "dots6"
+  }
+];
+
+function changeDotsPlayer1() {
+  
+  let randomDice1 = Math.floor(Math.random() * Dices.length);
+  //Create variable for classlist player1
+  let recentDice = player1Dice.classList;
+  let recentdots = dots.classList;
+
+  //replace and change the Classlist
+  player1Dice.classList.replace(recentDice, Dices[randomDice1].Dice);
+  dots.classList.replace(recentdots, Dices[randomDice1].dot);
+  return randomDice1;
+}
+
+function changeDotsPlayer2() {
+
+  let randomDice2 = Math.floor(Math.random() * Dices.length);
+
+   //Create variable for classlist player2
+  let recentDice2 = player2Dice.classList;
+  let recentdots2 = dots2.classList;
+
+  //replace and change the Classlist
+  player2Dice.classList.replace(recentDice2, Dices[randomDice2].Dice);
+  dots2.classList.replace(recentdots2, Dices[randomDice2].dot);
+  return randomDice2;
+}
+
+//Button event listener
+diceButton.addEventListener("click", function () {
+  
+  let player1Score = changeDotsPlayer1();
+  let player2Score = changeDotsPlayer2();
+
+  if (player1Score > player2Score) {
+    winnerText.innerHTML = "Player 1 Wins";
+  } else if (player2Score > player1Score) {
+    winnerText.innerHTML = "Player 2 Wins";
+  } else {
+    winnerText.innerHTML = "It's a Tie";
+  }
 });
