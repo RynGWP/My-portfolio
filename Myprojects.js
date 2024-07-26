@@ -151,8 +151,11 @@ function changeDotsPlayer2() {
 }
 
 //Button event listener
-diceButton.addEventListener("click", function () {
+diceButton.addEventListener("click", function (e) {
   
+  let clickSound = new Audio("./Assets/clickSound.mp3");
+  clickSound.play();
+
   let player1Score = changeDotsPlayer1();
   let player2Score = changeDotsPlayer2();
 
@@ -164,3 +167,5 @@ diceButton.addEventListener("click", function () {
     winnerText.innerHTML = "It's a Tie";
   }
 });
+
+
