@@ -14,3 +14,15 @@ body {
     
 }
 
+@font-face {
+    font-family: Angerstyles;
+    src: url(./Assets/AngerStyles.ttf);
+}
+
+h2 {
+    font-family: Angerstyles;
+}
+
+h1{
+    font-family: Angerstyles;
+}
