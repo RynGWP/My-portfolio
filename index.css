@@ -126,7 +126,7 @@ p {
     border-radius: 50%;
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Ensure the image is a block element */
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .main > h2,
@@ -139,7 +139,7 @@ p {
   }
 
   .main > h2 {
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: medium;
   }
 
@@ -148,6 +148,7 @@ p {
     margin-right: auto;
     text-align: center; /* Center the heading */
     font-family: "Quicksand", sans-serif;
+    font-size: 1.3rem;
   }
 
   .main > span {
@@ -157,10 +158,18 @@ p {
 
   }
 
-  main > button {
+  .main > button {
     margin-bottom: 60px;
   }
 }
+
+p {
+  font-size: .9rem;
+  color: #e7e7e7;
+}
+
+
+
 
 @media (min-width: 600px) and (max-width: 1000px) {
   .grid-container {
