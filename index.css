@@ -225,7 +225,7 @@ p {
 
 /*bg animation */
 .bg {
-  background: url(./Assets/bg.jpg) no-repeat;
+  background: #000 url(./Assets/bg.jpg) no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
