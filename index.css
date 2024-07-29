@@ -15,7 +15,7 @@ p {
 }
 
 body {
-  background: linear-gradient(120deg, rgb(8, 8, 62), rgb(3, 10, 44));
+  /* background: linear-gradient(120deg, rgb(8, 8, 62), rgb(3, 10, 44)); */
   height: 100vh;
 }
 
@@ -69,7 +69,7 @@ p {
 }
 
 .main > span {
-  font-family: arial;
+  font-family: "Quicksand", sans-serif;
   margin-left: 200px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -80,13 +80,13 @@ p {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: frontend 2s steps(21) 1s forwards infinite alternate,
+  animation: frontend 2s steps(20) 1s forwards infinite alternate,
     blink 0.5s steps(1) infinite;
 }
 
 @keyframes frontend {
   to {
-    width: 21ch;
+    width: 20ch;
   }
 }
 
@@ -107,6 +107,7 @@ p {
 @media (max-width: 600px) {
   .grid-container {
     width: 100%;
+    height: 100%;
   }
 
   .main {
