@@ -17,6 +17,7 @@ p {
 body {
   /* background: linear-gradient(120deg, rgb(8, 8, 62), rgb(3, 10, 44)); */
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .grid-container {
@@ -227,8 +228,8 @@ p {
 .bg {
   background: #000 url(./Assets/bg.jpg) no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
