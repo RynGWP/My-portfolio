@@ -82,7 +82,7 @@ p {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: frontend 2s steps(17) 2s forwards infinite alternate,
+  animation: frontend 2.5s steps(17) 2s forwards infinite alternate,
     blink 0.5s steps(1) infinite;
 }
 
@@ -140,7 +140,7 @@ p {
 
   .main > h2 {
     margin-top: 5px;
-    font-size: medium;
+    font-size: 1rem;
   }
 
   .main > h1 {
@@ -155,7 +155,8 @@ p {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
+    margin-bottom:0;
+    font-size: 1rem;
   }
 
   .main > button {
@@ -166,7 +167,9 @@ p {
 p {
   font-size: .9rem;
   color: #e7e7e7;
+  margin-bottom: 0;
 }
+
 
 
 
