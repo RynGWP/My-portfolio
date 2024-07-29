@@ -89,7 +89,7 @@ char.addEventListener("keydown", function (event) {
 });
 
 //Dice Game
-
+let clickSound = new Audio("./Assets/clickSound.mp3");
 const diceButton = document.querySelector("#dice-Button");
 let player1Dice = document.querySelector("#player1Random");
 let player2Dice = document.querySelector("#player2Random");
@@ -99,32 +99,31 @@ const dots2 = document.querySelector("#dotsp2");
 const Dices = [
   {
     Dice: "dicebox1",
-    dot: "dots1"
+    dot: "dots1",
   },
   {
     Dice: "dicebox2",
-    dot: "dots2"
+    dot: "dots2",
   },
   {
     Dice: "dicebox3",
-    dot: "dots3"
+    dot: "dots3",
   },
   {
     Dice: "dicebox4",
-    dot: "dots4"
+    dot: "dots4",
   },
   {
     Dice: "dicebox5",
-    dot: "dots5"
+    dot: "dots5",
   },
   {
     Dice: "dicebox6",
-    dot: "dots6"
-  }
+    dot: "dots6",
+  },
 ];
 
 function changeDotsPlayer1() {
-  
   let randomDice1 = Math.floor(Math.random() * Dices.length);
   //Create variable for classlist player1
   let recentDice = player1Dice.classList;
@@ -137,10 +136,9 @@ function changeDotsPlayer1() {
 }
 
 function changeDotsPlayer2() {
-
   let randomDice2 = Math.floor(Math.random() * Dices.length);
 
-   //Create variable for classlist player2
+  //Create variable for classlist player2
   let recentDice2 = player2Dice.classList;
   let recentdots2 = dots2.classList;
 
@@ -152,8 +150,6 @@ function changeDotsPlayer2() {
 
 //Button event listener
 diceButton.addEventListener("click", function (e) {
-  
-  let clickSound = new Audio("./Assets/clickSound.mp3");
   clickSound.play();
 
   let player1Score = changeDotsPlayer1();
@@ -167,5 +163,3 @@ diceButton.addEventListener("click", function (e) {
     winnerText.innerHTML = "It's a Tie";
   }
 });
-
-
