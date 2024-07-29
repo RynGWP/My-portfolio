@@ -42,6 +42,7 @@ p {
   width: 800px;
   margin-left: 200px;
   color: white;
+  font-size: 1rem;
 }
 
 .main > h2 {
@@ -70,9 +71,9 @@ p {
 .main > span {
   font-family: "Quicksand", sans-serif;
   margin-left: 200px;
-  margin-bottom:10px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: aqua;
   display: inline-block;
   letter-spacing: 0.1rem;
@@ -80,13 +81,13 @@ p {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: frontend 2s steps(20) 1s forwards infinite alternate,
+  animation: frontend 2s steps(17) 2s forwards infinite alternate,
     blink 0.5s steps(1) infinite;
 }
 
 @keyframes frontend {
   to {
-    width: 20ch;
+    width: 18ch;
   }
 }
 
@@ -103,6 +104,7 @@ p {
     border-color: transparent;
   }
 }
+
 
 @media (max-width: 600px) {
   .grid-container {
