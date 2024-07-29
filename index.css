@@ -69,6 +69,8 @@ p {
   margin-left: 200px;
 }
 
+
+
 .main > span {
   font-family: "Quicksand", sans-serif;
   margin-left: 200px;
@@ -82,14 +84,30 @@ p {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: frontend 2.5s steps(17) 2s forwards infinite alternate,
-    blink 0.5s steps(1) infinite;
+  animation: frontend 2s steps(17) 1s forwards infinite alternate,
+    blink .5s steps(1) infinite ;
 }
 
+ 
+
 @keyframes frontend {
-  to {
-    width: 18ch;
-  }
+  
+from {
+  width: 0ch;
+}
+25% {
+  width: 6ch;
+}
+50% {
+  width: 12h;
+}
+75% {
+  width: 18h;
+}
+100% {
+  width: 18ch;
+}
+
 }
 
 @keyframes blink {
@@ -105,6 +123,9 @@ p {
     border-color: transparent;
   }
 }
+
+
+
 
 
 @media (max-width: 600px) {
@@ -140,7 +161,7 @@ p {
 
   .main > h2 {
     margin-top: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .main > h1 {
@@ -148,7 +169,7 @@ p {
     margin-right: auto;
     text-align: center; /* Center the heading */
     font-family: "Quicksand", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .main > span {
@@ -156,8 +177,9 @@ p {
     margin-right: auto;
     text-align: center;
     margin-bottom:0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
+
 
   .main > button {
     margin-bottom: 60px;
