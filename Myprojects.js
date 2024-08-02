@@ -174,7 +174,7 @@ let userClickPattern = [];
 let userChosenColours = [];
 let level = 0;
 
-$(document).keypress(function () {
+$(document).click(function () {
   $("h1").text("Level " + level);
   if (!started) {
     nextSequence();
