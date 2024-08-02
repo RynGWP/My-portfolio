@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My projects</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link  href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="./Myprojects.css">
 </head>
-<body>
+<body>  
     
     <nav class="navbar fixed-top bg-secondary ">
         <div class="container-fluid ">
@@ -53,7 +54,7 @@
                   <div class="text-area col-10 mx-auto ">
                       <p class="quotes col-sm-12" id="text-area">"The biggest risk is not taking risk.
                          In a world that is changing really quickly. the only strategy that is guaranteed to fail is not taking any risks."</p>
-                      <h4 class="person mt-5" id="person">-Mark Zuckerberg </h4>
+                      <h4 class="person mt-5" id="person">- Mark Zuckerberg </h4>
                       <div class="generate btn btn-success my-5" id="generate-button">Generate Quotes</div>
                   </div>
                 </div>
@@ -117,6 +118,7 @@
                 <div class="card-title text-center">
                   <h2 class="h2 fw-normal py-3 mb-5">Dice Game</h2>
                     <div class="row">
+
                       <div class="h3 winner fw-light mb-5">Tie</div>
                    
                         <div class=" left-dice col-6 sm-col-10">
@@ -128,11 +130,10 @@
                                 <div class="dots1" id="dotsp1"></div>
                                 <div class="dots1" id="dotsp1"></div>
                                 <div class="dots1" id="dotsp1"></div>
-                          </div>
-                                          
-                   
-                         </div>
-
+                          </div>                       
+                        </div>
+                        
+                       
                         <div class="right-dice col-6 ">
                           <p class="p mb-3 ">Player 2</p>                  
                           <div class="dicebox1" id="player2Random">                                          
@@ -145,6 +146,8 @@
                           </div>
                         </div>
                     </div>
+
+                    
                            <div class="btn btn-success my-5 col-4" id="dice-Button">Refresh</div>
                 </div>
               </div>
@@ -153,6 +156,34 @@
         </div>
       </section>
 
+      <!-- Simon Game -->
+      <section>
+        <div class="container mt-5 ">
+          <div class="row d-flex justify-content-center">
+            <div class="col-xl-6 mt-5 ">
+              <div class="card col-md-12 col-lg-10 col-xl-12 mb-5">
+                <div class="card-title text-center">
+                  <h1 id="level-title">Press Any Key to Start</h1>
+                  <div class="row simonBox">
+                    <div class="col-sm-6 button green" id="green" type = "button"></div>
+                    <div class="col-sm-6 button red" id="red" type = "button"></div>
+                  </div>
+
+                  <div class="row simonBox">
+                    <div class="col-sm-6 button yellow" id="yellow" type = "button"></div>
+                    <div class="col-sm-6 button blue" id="blue" type = "button"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./Myprojects.js"></script>
 </body>

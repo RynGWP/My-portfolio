@@ -1,4 +1,4 @@
-//QUOTES GENERATOR
+//QUOTES GENERATOR -----------------------------------------------------------------------------------------------------------------------------------
 
 let quotes = [
   '"Life is like a bycicle, you need to keep moving to balance."',
@@ -30,7 +30,7 @@ generateButton.addEventListener("click", function () {
   person.innerHTML = persons[random];
 });
 
-//LEAP YEAR CHECKER
+//LEAP YEAR CHECKER -----------------------------------------------------------------------------------------------------------------------------------
 
 leapYearchecker = document.querySelector("#checkYear");
 leapYearchecker.addEventListener("click", function () {
@@ -56,7 +56,7 @@ leapYearchecker.addEventListener("click", function () {
   }
 });
 
-//Character limiter
+//Character limiter -----------------------------------------------------------------------------------------------------------------------------------
 
 let char = document.querySelector("#exampleFormControlTextarea1");
 const charLimiter = document.querySelector("#charLimiter");
@@ -88,7 +88,7 @@ char.addEventListener("keydown", function (event) {
   }
 });
 
-//Dice Game
+//Dice Game -----------------------------------------------------------------------------------------------------------------------------------
 let clickSound = new Audio("./Assets/clickSound.mp3");
 const diceButton = document.querySelector("#dice-Button");
 let player1Dice = document.querySelector("#player1Random");
@@ -163,3 +163,79 @@ diceButton.addEventListener("click", function (e) {
     winnerText.innerHTML = "It's a Tie";
   }
 });
+
+// Simon Game ---------------------------------------------------------------------------------------------------------------------------------
+
+let buttonColours = ["red", "green", "blue", "yellow"];
+
+let started = false;
+let gamePattern = [];
+let userClickPattern = [];
+let userChosenColours = [];
+let level = 0;
+
+$(document).keypress(function () {
+  $("h1").text("Level " + level);
+  if (!started) {
+    nextSequence();
+    started = true;
+  }
+});
+
+$(".button").on("click", function () {
+  let userChosenColour = $(this).attr("id");
+  userClickPattern.push(userChosenColour);
+  playSound(userChosenColour);
+  animatePress(userChosenColour);
+  checkAnswer(userClickPattern.length - 1);
+});
+
+function nextSequence() {
+  userClickPattern = [];
+  level = level + 1;
+  $("h1").text("Level " + level);
+  let randomNumber = Math.floor(Math.random() * 4);
+  let newRandomColor = buttonColours[randomNumber];
+  gamePattern.push(newRandomColor);
+  animatePress(newRandomColor);
+  playSound(newRandomColor);
+}
+
+function playSound(sound) {
+  let gameSound = new Audio("./Assets/" + sound + ".mp3");
+  gameSound.play();
+}
+
+function animatePress(currentPress) {
+  $("#" + currentPress).addClass("pressed");
+
+  setTimeout(function () {
+    $("#" + currentPress).removeClass("pressed");
+  }, 100);
+}
+
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel] === userClickPattern[currentLevel]) {
+    if (userClickPattern.length === gamePattern.length) {
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);
+    }
+  } else {
+    playSound("wrong");
+    $("body").addClass("game-over");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+
+    startOver();
+  }
+}
+
+function startOver() {
+  level = 0;
+  started = false;
+  gamePattern = [];
+}
