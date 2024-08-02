@@ -174,11 +174,15 @@ let userClickPattern = [];
 let userChosenColours = [];
 let level = 0;
 
-$(document).click(function () {
-  $("h1").text("Level " + level);
+$("#simonButton").click(function () {
+  $("h1").text("Level " + "1");
   if (!started) {
-    nextSequence();
-    started = true;
+    setTimeout(function () {
+      nextSequence();
+      started = true;
+    }, 1000);
+    $("#simonButton").css("opacity","0");
+    
   }
 });
 
@@ -223,13 +227,9 @@ function checkAnswer(currentLevel) {
     }
   } else {
     playSound("wrong");
-    $("body").addClass("game-over");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
-
-    setTimeout(function () {
-      $("body").removeClass("game-over");
-    }, 200);
-
+    $("#level-title").text("Game Over, Press button to Restart");
+    $("#simonButton").css("opacity","1");
+    $("#simonButton").text("Restart");
     startOver();
   }
 }
