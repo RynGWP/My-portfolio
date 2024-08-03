@@ -239,3 +239,24 @@ function startOver() {
   started = false;
   gamePattern = [];
 }
+
+
+// QrCode Generator --------------------------------------------------------------------------------------------------------------
+$(document).ready(function () {
+  $("#qr-form").on("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the URL value
+    var url = $("#url").val();
+
+    // Clear any previous QR code
+    $("#qr-code").empty();
+
+    // Generate and display the QR code
+    $("#qr-code").qrcode({
+      text: url,
+      width: 200,
+      height: 200,
+    });
+  });
+});

@@ -365,7 +365,6 @@ body {
 
 /* Simon game */
 
-
 #level-title {
     background: linear-gradient(violet,blueviolet,darkviolet);
     background-clip: text;
@@ -420,3 +419,12 @@ body {
   }
   
 
+/* QrCode */
+#qr-code {
+    padding:10px;
+    margin:auto;
+   height: 220px;
+   width: 220px;
+   background: white;
+   margin-bottom:50px;
+}
