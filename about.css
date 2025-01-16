@@ -19,10 +19,21 @@ body {
     src: url(./Assets/AngerStyles.ttf);
 }
 
-h2 {
-    font-family: Angerstyles;
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem !important;
 }
 
-h1{
-    font-family: Angerstyles;
+
+.nav-link{
+    color:gray;
+}
+
+.active {
+    color:rgb(1, 1, 248);
+}
+
+p{
+    font-size:1.5rem;
+    color:rgb(132, 129, 129);
 }

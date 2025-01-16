@@ -57,16 +57,20 @@ p {
   float: right;
   margin: 50px;
   margin-top: 120px;
-  border: 2px solid #00f;
+  border: 2px solid rgb(37, 37, 41);
+  box-shadow: 0 0 5px rgba(33, 33, 34, 0.449), 0 0 10px rgba(28, 28, 34, 0.384), 0 0 20px rgba(15, 15, 20, 0.268), 0 0 40px rgba(33, 33, 58, 0.351),
+    0 0 80px rgba(53, 53, 80, 0.267);
+  /* border: 2px solid #00f;
   box-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #00f,
-    0 0 80px #00f;
+    0 0 80px #00f; */
   object-fit: cover;
 }
 
-.main button {
+.btn-primary {
   font-family: montserrat;
   font-weight: 500;
   margin-left: 200px;
+  z-index: 9999;
 }
 
 
@@ -371,4 +375,10 @@ p {
 }
 .star-field .layer:nth-child(3) {
   animation: sf-fly-by-3 5s linear infinite;
+}
+
+.grid-container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
 }

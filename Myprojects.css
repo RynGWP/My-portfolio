@@ -10,6 +10,10 @@ body {
     color: lime;
 }
 
+.nav-link{
+    color:rgb(160, 161, 163);
+}
+
 /* dice game */
 
 .left-dice {
