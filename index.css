@@ -139,6 +139,10 @@ from {
   }
 
 
+  p{
+    max-width: 300px;
+  }
+
 
   #offcanvasNavbar{
     width: 300px;
@@ -167,7 +171,7 @@ from {
   .terminal {
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 400px !important;
+    width: 300px !important;
     margin-top:10px !important;
   }
 
