@@ -198,7 +198,7 @@
 
   <li class="nav-item fs-4 d-none d-lg-flex text-secondary m-4 justify-content-between">          
     <div class="d-flex">
-      <a class="nav-link me-5" href="#">Tech Stack</a>
+      <a class="nav-link me-5" href="techStack.html">Tech Stack</a>
     <a class="nav-link me-5" href="about.html">About Me</a>
     <a class="nav-link me-5" href="./Myprojects.html">My Projects</a>
     <a class="nav-link me-5" href="contact.html">Contact Me</a>
@@ -213,16 +213,16 @@
  </a>
     </div>
 </li>
-    <nav class="navbar fixed-top bg-light d-lg-none d-flex">
+    <nav class="navbar fixed-top d-lg-none d-flex">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+          <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: 1px solid rgb(72, 73, 73); background: #18171ba6;">
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Personal Information</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -235,7 +235,16 @@
                 </li>
                 
                 <li class="nav-item fs-4">          
-                    <a class="nav-link" href="#">Tech Stack</a>
+                 <div class=" my-5">
+                  <a href="./Assets/CV.pdf" 
+                  download="REGINO_CV.pdf" 
+                  class="btn btn-secondary mx-auto" 
+                  onclick="console.log('Button clicked')"
+                  style="position: relative; z-index: 999; cursor: pointer;">
+                   Download CV <i class="fa-solid fa-cloud-arrow-down"></i>
+                  </a>
+                 </div>
+                    <a class="nav-link" href="techStack.html">Tech Stack</a>
                     <a class="nav-link" href="about.html">About Me</a>
                     <a class="nav-link" href="./Myprojects.html">My Projects</a>
                     <a class="nav-link" href="contact.html">Contact Me</a>
@@ -257,6 +266,7 @@
     <div class="grid-container">
              
         <div class="main">
+        
             <img src="./Assets/Mypic.jpg" alt="" loading="lazy">
             <h2>Hello, I am</h2>
 
@@ -323,14 +333,14 @@
                 and enhancing user experiences (UX). In my free time, I enjoy playing the guitar and engaging in online games.</p>
             <br>   
 
-            <!-- <a href="./Assets/IMS manuscript_v3..pdf" download class="btn btn-primary">
-              <i class="fa-solid fa-cloud-arrow-down"></i> Download CV
-          </a> -->
+   
 
         </div>
+        
        
 
         <div class="footer">
+  
 
         </div>
 

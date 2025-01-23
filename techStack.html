@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./techStack.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <style>
+
+.tech-stack {
+padding: 40px 0;
+}
+
+.tech-stack h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.tech-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.tech-stack p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+  </style>
+   
+</head>
+<body>
+
+
+  <li class="nav-item fs-4 d-none d-lg-flex text-secondary m-4 justify-content-between">          
+    <div class="d-flex">
+      <a class="nav-link me-5" href="#">Tech Stack</a>
+    <a class="nav-link me-5" href="about.html">About Me</a>
+    <a class="nav-link me-5" href="./Myprojects.html">My Projects</a>
+    <a class="nav-link me-5" href="contact.html">Contact Me</a>
+    </div>
+    <div >
+      <a href="./Assets/CV.pdf" 
+    download="REGINO_CV.pdf" 
+    class="btn btn-secondary " 
+    onclick="console.log('Button clicked')"
+    style="position: relative; z-index: 999; cursor: pointer;">
+     <i class="fa-solid fa-cloud-arrow-down"></i> Download CV
+ </a>
+    </div>
+</li>
+    <nav class="navbar fixed-top d-lg-none d-flex">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Personal Information</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item text-center">
+                    <div class="icon">
+                        <a href="https://web.facebook.com/profile.php?id=100076427416901">
+                        <a href="https://www.messenger.com/t/100076427416901">
+                        <a href="">
+                    </div>
+                </li>
+                
+                <li class="nav-item fs-4">          
+                 <div class=" my-5">
+                  <a href="./Assets/CV.pdf" 
+                  download="REGINO_CV.pdf" 
+                  class="btn btn-secondary mx-auto" 
+                  onclick="console.log('Button clicked')"
+                  style="position: relative; z-index: 999; cursor: pointer;">
+                   Download CV <i class="fa-solid fa-cloud-arrow-down"></i>
+                  </a>
+                 </div>
+                    <a class="nav-link" href="#">Tech Stack</a>
+                    <a class="nav-link" href="about.html">About Me</a>
+                    <a class="nav-link" href="./Myprojects.html">My Projects</a>
+                    <a class="nav-link" href="contact.html">Contact Me</a>
+                </li>
+                
+           
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- live Background -->
+      <div class="bg"></div>
+      <div class="star-field">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+
+    <div class="grid-container">
+             
+        <section class="tech-stack my-5">
+            <h2 class="text-center mb-5">My Tech Stack</h2>
+            <div class="container">
+              <div class="row justify-content-center g-4 col-10 mx-auto">
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <i class="fab fa-html5 tech-icon text-danger"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <i class="fab fa-css3-alt tech-icon text-primary"></i>
+                  <p>CSS</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <i class="fab fa-js-square tech-icon text-warning"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <img src="./Assets/postgreSQL icon.jpg" alt="" width="60">
+                  <p>PostgreSQL</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <i class="fab fa-node-js tech-icon text-success"></i>
+                  <p>Node.js</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <img src="./Assets/express icon.jpg" alt="" width="60">
+                  <p>Express.js</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <img src="./Assets/jquery icon.png" alt="" width="60">
+                  <p>jQuery</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <img src="./Assets/SweetAlert2 icon.png" alt="" width="80">
+                  <p>SweetAlert</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                  <i class="fas fa-code tech-icon text-warning"></i>
+                  <p>EJS</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+       
+
+        <div class="footer">
+  
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+</html>
+

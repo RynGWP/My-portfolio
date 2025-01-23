@@ -37,3 +37,25 @@ p{
     font-size:1.5rem;
     color:rgb(132, 129, 129);
 }
+
+
+
+
+#offcanvasNavbar{
+    width: 300px;
+    padding:10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(5, 11, 21, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  #offcanvasNavbarLabel{
+    color:#c3c0c0
+  }
+
+  #offcanvasNavbar > div.offcanvas-body > ul > li.nav-item.fs-4 > div > a.btn.btn-secondary.mx-auto{
+    background: transparent;
+    width: 250px;
+  }

@@ -138,6 +138,39 @@ from {
     height: 100vh;
   }
 
+
+
+  #offcanvasNavbar{
+    width: 300px;
+    padding:10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(5, 11, 21, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  #offcanvasNavbarLabel{
+    color:#c3c0c0
+  }
+
+  #offcanvasNavbar > div.offcanvas-body > ul > li.nav-item.fs-4 > div > a.btn.btn-secondary.mx-auto{
+    background: transparent;
+    width: 250px;
+  }
+
+  
+  .nav-link{
+    color:rgb(164, 163, 163);
+  }
+
+  .terminal {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 400px !important;
+    margin-top:10px !important;
+  }
+
   .main {
     width: 100%;
     display: flex;
