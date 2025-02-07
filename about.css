@@ -1,61 +1,60 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: 100vh;
-    margin-bottom:50px;
+  height: 100vh;
+  margin-bottom: 50px;
 }
 
-
 .carousel-indicators [data-bs-target] {
-    background: rgb(70, 71, 71);
-    
+  background: rgb(70, 71, 71);
 }
 
 @font-face {
-    font-family: Angerstyles;
-    src: url(./Assets/AngerStyles.ttf);
+  font-family: Angerstyles;
+  src: url(./Assets/AngerStyles.ttf);
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem !important;
 }
 
-
-.nav-link{
-    color:gray;
+.nav-link {
+  color: gray;
 }
 
 .active {
-    color:rgb(1, 1, 248);
+  color: rgb(1, 1, 248);
 }
 
-p{
-    font-size:1.5rem;
-    color:rgb(132, 129, 129);
+p {
+  font-size: 1.5rem;
+  color: rgb(132, 129, 129);
 }
 
+#offcanvasNavbar {
+  width: 300px;
+  padding: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(5, 11, 21, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
 
+#offcanvasNavbarLabel {
+  color: #c3c0c0;
+}
 
-
-#offcanvasNavbar{
-    width: 300px;
-    padding:10px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(5, 11, 21, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
-
-  #offcanvasNavbarLabel{
-    color:#c3c0c0
-  }
-
-  #offcanvasNavbar > div.offcanvas-body > ul > li.nav-item.fs-4 > div > a.btn.btn-secondary.mx-auto{
-    background: transparent;
-    width: 250px;
-  }
+#offcanvasNavbar
+  > div.offcanvas-body
+  > ul
+  > li.nav-item.fs-4
+  > div
+  > a.btn.btn-secondary.mx-auto {
+  background: transparent;
+  width: 250px;
+}
