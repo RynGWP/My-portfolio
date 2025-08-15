@@ -243,6 +243,11 @@ body {
   color: white;
 }
 
+
+.project-image img{
+  width: 350px;
+}
+
 .project-content {
   padding: 2rem;
 }
@@ -604,7 +609,10 @@ body {
 
   .project-card {
     margin-bottom: 1rem;
-    width: ;
+  }
+
+  .project-image img {
+    width: 250px;
   }
 
   .tech-grid {
@@ -626,9 +634,9 @@ body {
   }
 
 
-  .certificate-item img {
-    width: 300px;
-  }
+.certificate-item img {
+  width: 250px ;
+}
 
   .skills-grid {
     grid-template-columns: 1fr;
