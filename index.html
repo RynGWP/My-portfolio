@@ -4,351 +4,406 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Ryan Christian E. Regino - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .card {
-      padding: 1rem;
-      overflow: hidden;
-      border: 1px solid #c5c5c5;
-      border-radius: 12px;
-      background-color: #d9d9d92f;
-      backdrop-filter: blur(8px);
-      min-width: 200px;
-      width: 400px;
-      margin-left:200px;
-    }
-    .wrap {
-      display: flex;
-      gap: 1rem;
-      position: relative;
-      z-index: 10;
-      border: 0.5px solid #525252;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .terminal {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-        width: 450px;
-        margin-left:200px;
-        outline: 0.5px solid gray ;
-    }
-    .head {
-      display: flex;
-      align-items: center;
-     
-      overflow: hidden;
-      min-height: 40px;
-      padding-inline: 12px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      background-color: #202425;
-    }
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 8px;
-      height: 2.5rem;
-      user-select: none;
-      font-weight: 600;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: #8e8e8e;
-    }
-    .title > svg {
-      height: 18px;
-      width: 18px;
-      margin-top: 2px;
-      color: #006adc;
-    }
-    .copy_toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.25rem;
-      border: 0.65px solid #c1c2c5;
-      margin-left: auto;
-      border-radius: 6px;
-      background-color: #202425;
-      color: #8e8e8e;
-      cursor: pointer;
-    }
-    .copy_toggle > svg {
-      width: 20px;
-      height: 20px;
-    }
-    .copy_toggle:active > svg > path,
-    .copy_toggle:focus-within > svg > path {
-      animation: clipboard-check 500ms linear forwards;
-    }
-    .body {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border-bottom-right-radius: 8px;
-      border-bottom-left-radius: 8px;
-      overflow-x: auto;
-      padding: 1rem;
-      line-height: 19px;
-      color: white;
-      background-color: black;
-      white-space: nowrap;
-    }
-    .pre {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      text-wrap: nowrap;
-      white-space: pre;
-      background-color: transparent;
-      overflow: hidden;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-    .pre code:nth-child(1) {
-      color: #575757;
-    }
-    .pre code:nth-child(2) {
-      color: #757677;
-    }
-    .cmd {
-      height: 19px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      color:rgb(39, 204, 27);
-      gap:2px;
-    }
-    .cmd::before {
-      content: attr(data-cmd);
-      position: relative;
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: transparent;
-      animation: inputs 8s steps(22) infinite;
-    }
-    .cmd::after {
-      content: "";
-      position: relative;
-      display: block;
-      height: 100%;
-      overflow: hidden;
-      background-color: transparent;
-      border-right: 0.15em solid #69aac4;
-      animation: cursor 0.5s step-end infinite alternate, blinking 0.5s infinite;
-    }
-    
-    @keyframes blinking {
-      20%,
-      80% {
-        transform: scaleY(1);
-      }
-      50% {
-        transform: scaleY(0);
-      }
-    }
-    @keyframes cursor {
-      50% {
-        border-right-color: transparent;
-      }
-    }
-    @keyframes inputs {
-      0%,
-      100% {
-        width: 0;
-      }
-      10%,
-      90% {
-        width: 58px;
-      }
-      30%,
-      70% {
-        width: 215px;
-        max-width: max-content;
-      }
-    }
-    @keyframes clipboard-check {
-      100% {
-        color: #fff;
-        d: path(
-          "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
-        );
-      }
-    }
-     
-</style>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <!-- Fixed Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+    <div class="container">
+      <!-- Desktop Navigation -->
+      <div class="d-none d-lg-flex ms-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tech-stack">Tech Stack</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
 
+      <!-- Mobile Navigation -->
+      <div class="d-lg-none ms-auto">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" style="background: rgba(255, 255, 255, 0.1);">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
-  <li class="nav-item fs-4 d-none d-lg-flex text-secondary m-4 justify-content-between">          
-    <div class="d-flex">
-      <a class="nav-link me-5" href="techStack.html">Tech Stack</a>
-    <a class="nav-link me-5" href="about.html">About Me</a>
-    <a class="nav-link me-5" href="./Myprojects.html">My Projects</a>
-    <a class="nav-link me-5" href="contact.html">Contact Me</a>
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home" data-bs-dismiss="offcanvas">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-bs-dismiss="offcanvas">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tech-stack" data-bs-dismiss="offcanvas">Tech Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" data-bs-dismiss="offcanvas">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a>
+            </li>
+            <li class="nav-item mt-4">
+              <button onclick="handleCVDownload()" class="btn-custom">
+                <i class="fa-solid fa-download"></i> Download CV
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div >
-      <a href="./Assets/CV.pdf" 
-    download="REGINO_CV.pdf" 
-    class="btn btn-secondary " 
-    onclick="console.log('Button clicked')"
-    style="position: relative; z-index: 999; cursor: pointer;">
-     <i class="fa-solid fa-cloud-arrow-down"></i> Download CV
- </a>
-    </div>
-</li>
-    <nav class="navbar fixed-top d-lg-none d-flex">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: 1px solid rgb(72, 73, 73); background: #18171ba6;">
-            <span class="navbar-toggler-icon"></span>
+  </nav>
+
+  <!-- Background -->
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="container">
+      <div class="home-content">
+        <div class="home-text">
+          <h2>Hello, I am</h2>
+          <h1>Ryan Christian E. Regino</h1>
+          
+          <div class="character-text" id="charText">
+            Software Engineer
+          </div>
+          
+          <p>I am a Software Engineer from North Cotabato, Philippines. I have been creating websites since 2022, and I am passionate about designing user interfaces (UI) and enhancing user experiences (UX). In my free time, I enjoy playing the guitar and engaging in online games.</p>
+          
+          <button onclick="handleCVDownload()" class="btn-custom">
+            <i class="fa-solid fa-download"></i> Download CV
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Personal Information</h5>
-              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item text-center">
-                    <div class="icon">
-                        <a href="https://web.facebook.com/profile.php?id=100076427416901">
-                        <a href="https://www.messenger.com/t/100076427416901">
-                        <a href="">
-                    </div>
-                </li>
-                
-                <li class="nav-item fs-4">          
-                 <div class=" my-5">
-                  <a href="./Assets/CV.pdf" 
-                  download="REGINO_CV.pdf" 
-                  class="btn btn-secondary mx-auto" 
-                  onclick="console.log('Button clicked')"
-                  style="position: relative; z-index: 999; cursor: pointer;">
-                   Download CV <i class="fa-solid fa-cloud-arrow-down"></i>
-                  </a>
-                 </div>
-                
-                 <a class="nav-link" href="./techStack.html">Tech Stack</a>
-                 <a class="nav-link" href="about.html">About Me</a>
-                 <a class="nav-link" href="./Myprojects.html">My Projects</a>
-                 <a class="nav-link" href="contact.html">Contact Me</a>
-                </li>
-                
-           
-            </div>
+        </div>
+        
+        <div class="home-image">
+          <img src="./Assets/Regino.JPG" alt="Ryan Christian E. Regino" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>I'm a passionate Software Engineer with a strong foundation in web development and user experience design. My journey in tech began in 2022, and since then, I've been dedicated to creating innovative solutions that bridge the gap between functionality and aesthetics.</p>
+        
+        <p>My expertise lies in frontend development, where I specialize in crafting responsive, user-friendly interfaces that provide exceptional user experiences. I believe in continuous learning and staying updated with the latest technologies and industry trends.</p>
+
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-code"></i>
+            <h4>Frontend Development</h4>
+            <p>Building responsive and interactive user interfaces</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-paint-brush"></i>
+            <h4>UI/UX Design</h4>
+            <p>Creating intuitive and visually appealing designs</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Responsive Design</h4>
+            <p>Ensuring optimal experience across all devices</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <h4>Backend Integration</h4>
+            <p>Connecting frontend with robust backend systems</p>
           </div>
         </div>
-      </nav>
+      </div>
+    </div>
+  </section>
 
-      <!-- live Background -->
-      <div class="bg"></div>
-      <div class="star-field">
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-
-    <div class="grid-container">
-             
-        <div class="main">
-        
-            <img src="./Assets/Mypic.jpg" alt="" loading="lazy">
-            <h2>Hello, I am</h2>
-
-            <h1 >Ryan Christian E. Regino</h1>      
-        
-            
-                <div class="terminal">
-                  <hgroup class="head">
-                    <span class="title">
-                      <svg
-                        width="16px"
-                        height="16px"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                      >
-                        <path
-                          d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-                        ></path>
-                      </svg>
-                      Terminal
-                    </span>
-              
-                    <button class="copy_toggle" tabindex="-1" type="button">
-                      <svg
-                        width="16px"
-                        height="16px"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                      >
-                        <path
-                          d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
-                        ></path>
-                        <path
-                          d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </hgroup>
-              
-                  <div class="body">
-                    <pre class="pre">          <code>-&nbsp;</code>
-                      <code>npm&nbsp;</code>
-                      <code class="cmd" data-cmd="SOFTWARE ENGINEER"></code>
-                    </pre>
-                  </div>
-                </div>
-          
-           
-          <br> 
-            <p> I am Software Engineer from North Cotabato, Philippines.
-               I have been creating websites since 2022,  and I am passionate about designing user interfaces (UI)
-                and enhancing user experiences (UX). In my free time, I enjoy playing the guitar and engaging in online games.</p>
-            <br>   
-
-   
-
+  <!-- Tech Stack Section -->
+  <section id="tech-stack" class="section">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <i class="fab fa-html5" style="color: #e34f26;"></i>
+          <h4>HTML5</h4>
         </div>
-        
-       
-
-        <div class="footer">
-  
-
+        <div class="tech-item">
+          <i class="fab fa-css3-alt" style="color: #1572b6;"></i>
+          <h4>CSS3</h4>
         </div>
+        <div class="tech-item">
+          <i class="fab fa-js-square" style="color: #f7df1e;"></i>
+          <h4>JavaScript</h4>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-react" style="color: #61dafb;"></i>
+          <h4>React</h4>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-node-js" style="color: #339933;"></i>
+          <h4>Node.js</h4>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-bootstrap" style="color: #7952b3;"></i>
+          <h4>Bootstrap</h4>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-git-alt" style="color: #f05032;"></i>
+          <h4>Git</h4>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-database" style="color: #336791;"></i>
+          <h4>SQL</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Quote Generator -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-quote-right"></i>
+        </div>
+        <div class="project-content">
+          <h4>Quote Generator</h4>
+          <p>A simple JavaScript app that generates random inspirational quotes at the click of a button.</p>
+          <div class="project-links">
+            <a href="/Myprojects.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/quote-generator" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leap Year Checker -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="project-content">
+          <h4>Leap Year Checker</h4>
+          <p>Enter a year to quickly find out if it's a leap year, using a simple algorithm in JavaScript.</p>
+          <div class="project-links">
+            <a href="/Myprojects.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/leap-year-checker" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Character Limit -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-text-width"></i>
+        </div>
+        <div class="project-content">
+          <h4>Character Limit Counter</h4>
+          <p>A tool that counts characters in real time and warns when approaching a set limit.</p>
+          <div class="project-links">
+            <a href="/Myprojects.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/character-limit" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dice Game -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-dice"></i>
+        </div>
+        <div class="project-content">
+          <h4>Dice Game</h4>
+          <p>Two-player dice game that generates random rolls and declares a winner instantly.</p>
+          <div class="project-links">
+            <a href="/Myprojects.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/dice-game" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simon Game -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="project-content">
+          <h4>Simon Game</h4>
+          <p>Memory game where players repeat an increasingly complex pattern of lights and sounds.</p>
+          <div class="project-links">
+            <a href="simon-game.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/simon-game" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Code Generator -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-qrcode"></i>
+        </div>
+        <div class="project-content">
+          <h4>QR Code Generator</h4>
+          <p>Generates a scannable QR code from any text or URL entered by the user.</p>
+          <div class="project-links">
+            <a href="/Myprojects.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/qr-generator" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RHU Immunization Monitoring System -->
+      <div class="project-card">
+        <div class="project-image ">
+          <img src="./Assets/registeredPatients.png" style="width: 340px;" alt="RHU Immunization Monitoring System">
+        </div>
+        <div class="project-content">
+          <h4>RHU Immunization Monitoring System</h4>
+          <p>A web application for monitoring and managing immunization data for local health units.</p>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/rhu-immunization" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datupaglas Taxation System -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./Assets/Project 2.png" style="width: 350px;" alt="Datupaglas Taxation System">
+        </div>
+        <div class="project-content">
+          <h4>Datupaglas Taxation System</h4>
+          <p>A taxation management system for automating taxpayer registration, payments, and reports.</p>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/your-github/datupaglas-taxation" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- <script src="./index.js"></script> -->
-</body>
-</html>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <h2>Certificates</h2>
+      <div class="certificate-grid">
+
+        <div class="certificate-item">
+          <img src="./Assets/HTML_certificate_1.jpg" alt="">
+          <h4>HTML</h4>
+        </div>
+        <div class="certificate-item">
+          <img src="./Assets/CSS_certificate.jpg" alt="">
+          <h4>CSS3</h4>
+        </div>
+        <div class="certificate-item">
+          <img src="./Assets/JavaScript_certificate.jpg" alt="">
+          <h4>JavaScript</h4>
+        </div>
+        <div class="certificate-item">
+          <img src="./Assets/PHP_certificate.jpg" alt="">
+          <h4>PHP_certificate</h4>
+        </div>
+        <div class="certificate-item">
+          <img src="./Assets/Programming_Hero_Certificate_python_fundamental.jpg" alt="">
+          <h4>Python</h4>
+        </div>
+       
+      
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-content">
+        <p class="text-secondary">Let's connect and discuss how we can work together to bring your ideas to life!</p>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h4>Email</h4>
+            <p><a href="mailto:ryan@example.com">ryanregino4@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <h4>Phone</h4>
+            <p><a href="tel:+639123456789">09564054284</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <h4>LinkedIn</h4>
+            <p><a href="#" target="_blank">linkedin.com/in/ryanregino</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <h4>GitHub</h4>
+            <p><a href="#" target="_blank">https://github.com/RynGWP</a></p>
+          </div>
+        </div>
+
+       <div class="mt-5">
+          <!-- Send Email -->
+          <a href="mailto:youremail@example.com?subject=Inquiry&body=Hi%20Ryan," 
+            class="btn-custom me-3">
+            <i class="fas fa-envelope"></i> Send Email
+          </a>
+
+          <!-- Download CV -->
+          <button onclick="handleCVDownload()" class="btn-custom">
+            <i class="fas fa-download"></i> Download CV
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+<script src="./index.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 

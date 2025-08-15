@@ -30,30 +30,22 @@ generateButton.addEventListener("click", function () {
   person.innerHTML = persons[random];
 });
 
+
+
 //LEAP YEAR CHECKER -----------------------------------------------------------------------------------------------------------------------------------
 
-leapYearchecker = document.querySelector("#checkYear");
-leapYearchecker.addEventListener("click", function () {
+  leapYearchecker = document.querySelector("#checkYear");
+  leapYearchecker.addEventListener("click", function () {
   let yearInput = document.querySelector("#yearInput").value;
   let leapYearResult = document.querySelector("#leapYearResult");
 
-  if (yearInput % 4 === 0) {
-    if (yearInput % 100 === 0) {
-      if (yearInput % 400 === 0) {
-        leapYearResult.innerHTML = "Result :" + " Leap year";
-      } else {
-        leapYearResult.innerHTML = "Result :" + " Not a leap year";
-      }
-    } else {
-      leapYearResult.innerHTML = "Result :" + " Leap year";
-    }
+
+  if((yearInput % 4 === 0 && yearInput % 100 !== 0) || (yearInput % 400 === 0)) {
+    leapYearResult.textContent= "Leap year";
   } else {
-    leapYearResult.innerHTML = "Result :" + " Not a leap year";
+    leapYearResult.textContent = "Not a Leap year"
   }
 
-  if (yearInput === "") {
-    leapYearResult.innerHTML = "";
-  }
 });
 
 //Character limiter -----------------------------------------------------------------------------------------------------------------------------------
